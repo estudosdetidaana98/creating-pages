@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Pessoal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url('https://gifs.eco.br/wp-content/uploads/2022/09/gifs-de-tecnologia-2.gif'); 
+            background-size: cover;
+            background-position: center; 
+            color: white; 
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            padding: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: white; 
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); 
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        img {
+            width: 50%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .projetos-lista {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .projetos-lista li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <i class="fab fa-linkedin"></i> Portifólio Pessoal
+        </h1>
+    </header>
+    <header>
+        <h2>Bem-vindos!</h2>
+    </header>
+    <nav class="centro menu">
+        <div class="img1">
+            <img src="" alt="" width="170px">
+        </div>
+        <div class="select">
+            <select id="languageSelect" class="transpa">
+                <option value="1">Portugues</option>
+                <option value="2">English</option>
+            </select>
+            <button id="loginButton">Entrar</button>
+        </div> 
+    </nav>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home &rarr;</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2 id="home">Home</h2>
+        <img src="file:///C:/Users/ml104/Downloads/image-processing20210907-13511-unscreen.gif">
+        <p>Bem-vindos à minha página inicial. Aqui compartilho notícias e atualizações sobre meu trabalho.</p>
+    </section>
+
+    <section>
+        <h2 id="sobre">Sobre</h2>
+        <p>Sou a Ana Eliza, uma entusiasta da tecnologia com experiência em desenvolvimento web. Este site é meu espaço para compartilhar minha jornada e conhecimento. Atualmente estou estudando curso Técnico em Desenvolvimento de Sistemas no IFSul de Minas. E também o bootcamp da Generation Brasil, onde consigo aplicar todo  conteúdo estudado e prática ao mesmo tempo, melhorando o meu aprendizado diário.</p>
+    </section>
+
+    <section>
+        <h2 id="projetos">Projetos</h2>
+        <p>Confira alguns dos meus projetos mais recentes do backend e explore meu portfólio no Github.</p>
+    </section>
+    <ul class="projetos-lista">
+        <li><a href="https://github.com/estudosdetidaana98/crudfarmacia">crudfarmacia</a></li>
+        <li><a href="https://github.com/estudosdetidaana98/blogpessoal">blogpessoal</a></li>
+        <li><a href="https://github.com/identificai/identifica_ai">identifica_ai</a></li>
+    </ul>
+    </section>
+
+    <section>
+       <h2 id="contato">Contato <i  class="fas fa-envelope"></i><i  class="fas fa-phone"></i></h2>
+        <p>Você pode entrar em contato comigo através do e-mail: <a href="mailto:estudo.ti.ana@gmail.com">estudo.ti.ana@gmail.com</a></p>
+        <p>Ou ligando para o número: <a href="tel:+5512982705839">(12) 98270-5839</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desenvolvedora Ana Eliza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById('loginButton').addEventListener('click', function() {
+            alert('Você clicou no botão Entrar!');
+            
+        });
+
+        
+        document.getElementById('languageSelect').addEventListener('change', function() {
+            var selectedLanguage = this.value;
+            if (selectedLanguage === '1') {
+                
+                document.getElementById('home').textContent = 'Home';
+                document.getElementById('sobre').textContent = 'Sobre';
+                document.getElementById('projetos').textContent = 'Projetos';
+                document.getElementById('contato').textContent = 'Contato';
+            } else if (selectedLanguage === '2') {
+                
+                document.getElementById('home').textContent = 'Home';
+                document.getElementById('sobre').textContent = 'About';
+                document.getElementById('projetos').textContent = 'Projects';
+                document.getElementById('contato').textContent = 'Contact';
+            }
+        });
+    </script>
+</body>
+</html>
